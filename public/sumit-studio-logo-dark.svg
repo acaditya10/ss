@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 240" fill="none" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&amp;family=Great+Vibes&amp;family=Cormorant+Garamond:wght@400;500;600&amp;display=swap');
+      .serif-sumit-dark {
+        font-family: 'Cormorant Garamond', 'Playfair Display', Didot, 'Bodoni MT', serif;
+        font-size: 118px;
+        font-weight: 500;
+        letter-spacing: 0.28em;
+        text-anchor: middle;
+        text-transform: uppercase;
+        fill: #111111;
+      }
+      .script-studio-dark {
+        font-family: 'Alex Brush', 'Great Vibes', cursive;
+        font-size: 115px;
+        font-style: italic;
+        fill: #111111;
+      }
+    </style>
+    <!-- Subtle brush gradient for organic texture -->
+    <linearGradient id="brushFadeDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111111" stop-opacity="0.15" />
+      <stop offset="25%" stop-color="#111111" stop-opacity="0.95" />
+      <stop offset="85%" stop-color="#111111" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#111111" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main Uppercase Serif Wordmark: SUMIT -->
+  <text x="360" y="125" class="serif-sumit-dark">SUMIT</text>
+
+  <!-- Overlaid Signature Script: Studio with expressive positioning -->
+  <g transform="translate(245, 172) rotate(-3.5)">
+    <text x="0" y="0" class="script-studio-dark">Studio</text>
+  </g>
+
+  <!-- Expressive Brush Flourish / Underline Stroke echoing the logo artwork -->
+  <path
+    d="M 230 188 Q 380 206 590 178 Q 420 196 230 188 Z"
+    fill="url(#brushFadeDark)"
+  />
+  <path
+    d="M 270 191 Q 410 205 560 181"
+    stroke="#111111"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-opacity="0.85"
+  />
+  <!-- Secondary fine textured brush streak -->
+  <path
+    d="M 310 193 Q 440 204 530 184"
+    stroke="#111111"
+    stroke-width="0.75"
+    stroke-linecap="round"
+    stroke-opacity="0.5"
+  />
+</svg>
