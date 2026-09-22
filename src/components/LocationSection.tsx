@@ -4,10 +4,10 @@ import { MapPin, Phone, Clock, ExternalLink, Star, Compass } from 'lucide-react'
 
 export const LocationSection: React.FC = () => {
   return (
-    <section id="location" className="w-full py-16 sm:py-24 bg-[#EFECE6] border-y border-[#111111]/10">
+    <section id="location" className="w-full py-12 sm:py-16 lg:py-18 bg-[#EFECE6] border-y border-[#111111]/10">
       <div className="w-[92vw] max-w-[1550px] mx-auto">
         {/* Section Header */}
-        <div className="mb-10 sm:mb-14">
+        <div className="mb-8 sm:mb-10">
           <div className="flex items-center gap-2 mb-2">
             <Compass className="w-3.5 h-3.5 text-[#7D836D]" />
             <span className="font-sans-clean text-[10px] sm:text-xs tracking-[0.28em] uppercase text-[#77736B] font-medium">
@@ -32,7 +32,7 @@ export const LocationSection: React.FC = () => {
         {/* Content Bento Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left Details Panel */}
-          <div className="lg:col-span-5 flex flex-col justify-between bg-[#F7F5F0] p-6 sm:p-10 border border-[#111111]/10">
+          <div className="lg:col-span-5 flex flex-col justify-between bg-[#F7F5F0] p-5 sm:p-8 border border-[#111111]/10">
             <div>
               {/* Studio Title & Google Rating Badge */}
               <div className="flex items-start justify-between gap-4 pb-6 border-b border-[#111111]/10">
@@ -63,7 +63,7 @@ export const LocationSection: React.FC = () => {
               </div>
 
               {/* Studio Information List */}
-              <div className="space-y-6 pt-6">
+              <div className="space-y-4 sm:space-y-5 pt-5">
                 {/* Address */}
                 <div className="flex items-start gap-4">
                   <div className="w-9 h-9 rounded-full bg-[#111111]/5 flex items-center justify-center shrink-0 mt-0.5">
@@ -136,7 +136,7 @@ export const LocationSection: React.FC = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-8 mt-6 border-t border-[#111111]/10 flex flex-col sm:flex-row gap-3">
+            <div className="pt-6 mt-5 border-t border-[#111111]/10 flex flex-col sm:flex-row gap-3">
               <a
                 href={STUDIO_INFO.googleMapsUrl}
                 target="_blank"
@@ -159,7 +159,7 @@ export const LocationSection: React.FC = () => {
           </div>
 
           {/* Right Interactive Google Map Embed */}
-          <div className="lg:col-span-7 bg-[#E5E1D8] border border-[#111111]/10 relative min-h-[420px] lg:min-h-full overflow-hidden shadow-sm flex flex-col">
+          <div className="lg:col-span-7 bg-[#E5E1D8] border border-[#111111]/10 relative min-h-[360px] lg:min-h-[480px] overflow-hidden shadow-sm flex flex-col">
             {/* Top Bar for Map */}
             <div className="bg-[#111111] text-white px-4 py-2.5 flex items-center justify-between text-xs font-sans-clean">
               <div className="flex items-center gap-2">
@@ -180,18 +180,18 @@ export const LocationSection: React.FC = () => {
             </div>
 
             {/* Static map preview (local OSM tile stitch) linking to Google Maps */}
-            <div className="relative flex-1 w-full min-h-[360px]">
+            <div className="relative flex-1 w-full min-h-[300px] lg:min-h-[420px] flex items-center justify-center overflow-hidden">
               <a
                 href={STUDIO_INFO.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full h-full min-h-[380px]"
+                className="flex items-center justify-center w-full h-full"
                 aria-label="Open Sumit Studio location in Google Maps"
               >
                 <img
                   src="/images/maps-studio.png"
                   alt="Map of Sumit Studio, Krishna Nagar, Delhi"
-                  className="w-full h-full object-cover filter saturate-[0.9] contrast-[1.05]"
+                  className="max-w-full max-h-full object-contain filter saturate-[0.9] contrast-[1.05]"
                   loading="lazy"
                 />
               </a>

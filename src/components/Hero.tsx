@@ -86,23 +86,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onWatchFilm }) => {
             </p>
           </div>
 
-          <div className="absolute right-4 sm:right-8 md:right-12 top-0 bottom-0 flex flex-col justify-center items-end text-right z-10 pointer-events-none select-none">
-            <div className="bg-[#111111]/45 backdrop-blur-xs p-3 sm:p-5 border-l border-white/20 flex flex-col items-end">
-              <span className="font-serif-luxury text-sm sm:text-lg md:text-xl tracking-[0.25em] text-white/90 uppercase font-light leading-tight">
-                REAL
-              </span>
-              <span className="font-serif-luxury text-sm sm:text-lg md:text-xl tracking-[0.25em] text-white/90 uppercase font-light leading-tight mt-1">
-                PEOPLE.
-              </span>
-              <span className="font-serif-luxury text-sm sm:text-lg md:text-xl tracking-[0.25em] text-white/90 uppercase font-light leading-tight mt-2.5">
-                BEAUTIFUL
-              </span>
-              <span className="font-serif-luxury text-sm sm:text-lg md:text-xl tracking-[0.25em] text-white/90 uppercase font-light leading-tight mt-1">
-                STORIES.
-              </span>
-            </div>
-          </div>
-
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10 select-none pt-8 sm:pt-12">
             <h1 className="sr-only">
               Sumit Studio — Wedding Photography & Cinematography in Delhi NCR

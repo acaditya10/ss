@@ -50,10 +50,10 @@ export const IntroSection: React.FC = () => {
             </p>
 
             {/* Horizontal Statistics Row */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-[#111111]/15">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 pt-6 border-t border-[#111111]/15">
               {/* Stat 1 */}
-              <div className="flex flex-col border-r border-[#111111]/10 last:border-r-0 pr-4">
-                <span className="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl text-[#111111] font-normal leading-tight">
+              <div className="flex flex-col border-r border-[#111111]/10 last:border-r-0 pr-4 min-w-0">
+                <span className="font-serif-luxury text-2xl sm:text-3xl text-[#111111] font-normal leading-tight break-words">
                   25+
                 </span>
                 <span className="font-sans-clean text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-[#77736B] mt-1">
@@ -62,8 +62,8 @@ export const IntroSection: React.FC = () => {
               </div>
 
               {/* Stat 2 */}
-              <div className="flex flex-col border-r border-[#111111]/10 last:border-r-0 pr-4">
-                <span className="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl text-[#111111] font-normal leading-tight">
+              <div className="flex flex-col border-r border-[#111111]/10 last:border-r-0 pr-4 min-w-0">
+                <span className="font-serif-luxury text-2xl sm:text-3xl text-[#111111] font-normal leading-tight break-words">
                   PHOTO
                 </span>
                 <span className="font-sans-clean text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-[#77736B] mt-1">
@@ -72,8 +72,8 @@ export const IntroSection: React.FC = () => {
               </div>
 
               {/* Stat 3 */}
-              <div className="flex flex-col border-r border-[#111111]/10 last:border-r-0 pr-4">
-                <span className="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl text-[#111111] font-normal leading-tight">
+              <div className="flex flex-col border-r border-[#111111]/10 last:border-r-0 pr-4 min-w-0">
+                <span className="font-serif-luxury text-2xl sm:text-3xl text-[#111111] font-normal leading-tight break-words">
                   DELHI
                 </span>
                 <span className="font-sans-clean text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-[#77736B] mt-1">
@@ -82,8 +82,8 @@ export const IntroSection: React.FC = () => {
               </div>
 
               {/* Stat 4 */}
-              <div className="flex flex-col pr-4">
-                <span className="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl text-[#111111] font-normal leading-tight">
+              <div className="flex flex-col pr-4 min-w-0">
+                <span className="font-serif-luxury text-xl sm:text-2xl text-[#111111] font-normal leading-tight break-words">
                   COUNTLESS
                 </span>
                 <span className="font-sans-clean text-[9px] sm:text-[10px] tracking-[0.2em] uppercase text-[#77736B] mt-1">
