@@ -26,6 +26,7 @@ export const STUDIO_INFO = {
   youtubeVideos: 80,
   heroVideoId: 'AYOeKL3VNPA',
   heroVideoTitle: 'Madhav & Nihirika | Goa | Pre Wedding by Sumit Studio',
+  heroVideoSrc: '/videos/hero-loop.mp4',
   heroCouple: 'Madhav & Nihirika',
   heroLocation: 'Goa',
   rating: 4.8,

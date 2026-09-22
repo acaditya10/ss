@@ -9,9 +9,10 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onExploreClick, onWatchFilm }) => {
-  const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const node = sectionRef.current;
@@ -33,6 +34,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onWatchFilm }) => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (!shouldLoadVideo) return;
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    void video.play().catch(() => {});
+  }, [shouldLoadVideo]);
+
   return (
     <section
       id="hero"
@@ -52,23 +61,29 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick, onWatchFilm }) => {
             width={1280}
             height={720}
             className={`w-full h-full object-cover object-center absolute inset-0 transition-opacity duration-1000 ${
-              iframeLoaded ? 'opacity-30' : 'opacity-100'
+              videoPlaying ? 'opacity-30' : 'opacity-100'
             }`}
             loading="eager"
             fetchPriority="high"
           />
 
           {shouldLoadVideo && (
-            <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-              <iframe
-                src={`https://www.youtube-nocookie.com/embed/${STUDIO_INFO.heroVideoId}?autoplay=1&mute=1&loop=1&playlist=${STUDIO_INFO.heroVideoId}&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0`}
-                title={`${STUDIO_INFO.heroVideoTitle} — Sumit Studio`}
-                loading="lazy"
-                onLoad={() => setIframeLoaded(true)}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320vw] h-[320vh] min-w-[180%] min-h-[180%] object-cover pointer-events-none border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              />
-            </div>
+            <video
+              ref={videoRef}
+              src={STUDIO_INFO.heroVideoSrc}
+              poster={HERO_IMAGE.src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-hidden="true"
+              tabIndex={-1}
+              onPlaying={() => setVideoPlaying(true)}
+              onWaiting={() => setVideoPlaying(false)}
+              onError={() => setVideoPlaying(false)}
+              className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
+            />
           )}
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/85 via-[#111111]/35 to-[#111111]/50 pointer-events-none" />
