@@ -28,8 +28,15 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
       if (e.key === 'ArrowLeft') onPrev();
       if (e.key === 'ArrowRight') onNext();
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    if (isOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = prev;
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }
   }, [isOpen, onClose, onPrev, onNext]);
 
   if (!isOpen || !item) return null;
@@ -37,6 +44,9 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
   return (
     <div
       id="lightbox-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${item.title} photograph`}
       className="fixed inset-0 z-50 bg-[#111111]/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-8 animate-fade-up select-none"
       onClick={onClose}
     >

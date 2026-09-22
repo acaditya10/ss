@@ -29,48 +29,48 @@ export const Films: React.FC = () => {
                 STORIES THAT MOVE
               </span>
               <span className="font-sans-clean text-[9px] sm:text-[11px] tracking-[0.22em] uppercase text-[#77736B] block leading-tight font-light">
-                WATCH OUR FILMS
+                {STUDIO_INFO.youtubeVideos} FILMS ON YOUTUBE
               </span>
             </div>
           </div>
         </div>
 
-        {/* 3 Large Cinematic Video Cards */}
+        {/* Cinematic Video Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {CINEMATIC_FILMS.map((film) => (
-            <div
+            <button
               key={film.id}
+              type="button"
               onClick={() => setActiveFilm(film)}
-              className="group relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-[#151515] cursor-pointer select-none rounded-none shadow-sm"
+              className="group relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-[#151515] cursor-pointer select-none rounded-none shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D] text-left p-0 border-0"
+              aria-label={`Play ${film.title} film`}
             >
-              {/* Thumbnail Image */}
               <img
                 src={film.thumbnail}
                 alt={film.title}
+                width={1280}
+                height={720}
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-95 transition-all duration-700 ease-out group-hover:scale-[1.04]"
                 loading="lazy"
               />
 
-              {/* Dark Vignette Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/25 transition-opacity" />
 
-              {/* Centered Play Button */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-13 h-13 sm:w-16 sm:h-16 rounded-full bg-white/15 backdrop-blur-xs border border-white/40 flex items-center justify-center text-white transform group-hover:scale-110 group-hover:bg-white/25 transition-all duration-300">
-                  <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white ml-0.5" />
+                  <Play className="w-5 h-5 sm:w-6 sm:h-6 fill-white ml-0.5" aria-hidden="true" />
                 </div>
               </div>
 
-              {/* Bottom Film Title & Metadata */}
               <div className="absolute bottom-4 left-4 right-4 text-center">
                 <h3 className="font-serif-luxury text-sm sm:text-base md:text-lg tracking-[0.16em] uppercase text-white font-normal drop-shadow">
                   {film.title}
                 </h3>
                 <span className="font-sans-clean text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-white/70 font-light mt-1 block">
-                  {film.couple} · {film.duration}
+                  {film.location} · {film.duration}
                 </span>
               </div>
-            </div>
+            </button>
           ))}
         </div>
 
@@ -80,7 +80,7 @@ export const Films: React.FC = () => {
             href={STUDIO_INFO.youtubeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-8 py-3.5 bg-[#7D836D] hover:bg-[#686E58] text-white text-xs font-sans-clean tracking-[0.22em] uppercase rounded-none transition-all duration-300 focus:outline-none shadow-sm"
+            className="group inline-flex items-center gap-3 px-8 py-3.5 bg-[#7D836D] hover:bg-[#686E58] text-white text-xs font-sans-clean tracking-[0.22em] uppercase rounded-none transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D] shadow-sm"
           >
             <span>WATCH ALL FILMS ON YOUTUBE</span>
             <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />

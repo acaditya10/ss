@@ -43,6 +43,7 @@ export interface TestimonialItem {
 export interface InstagramItem {
   id: string;
   image: string;
+  url: string;
   alt: string;
   likes: string;
   caption: string;

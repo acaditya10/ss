@@ -1,7 +1,7 @@
 import React from 'react';
 import { Logo } from './Logo';
 import { STUDIO_INFO } from '../data/portfolioData';
-import { Instagram, Youtube, Facebook } from 'lucide-react';
+import { Instagram, Youtube, MapPin, Phone } from 'lucide-react';
 
 interface FooterProps {
   onNavigate?: (sectionId: string) => void;
@@ -85,11 +85,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               PORTFOLIO
             </a>
             <a
-              href="#stories"
-              onClick={(e) => handleLinkClick(e, 'stories')}
+              href="#instagram"
+              onClick={(e) => handleLinkClick(e, 'instagram')}
               className="font-sans-clean text-xs tracking-[0.16em] uppercase text-[#111111] hover:text-[#7D836D] transition-colors"
             >
-              BLOG
+              INSTAGRAM
             </a>
             <a
               href="#contact"
@@ -104,41 +104,39 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="flex flex-col space-y-4">
             <div>
               <p className="font-serif-luxury text-base uppercase tracking-wider text-[#111111]">
-                Delhi NCR · India
+                Krishna Nagar, Delhi
               </p>
-              <p className="font-sans-clean text-xs text-[#77736B] font-light mt-1">
-                Preserving luxury celebrations across India and worldwide.
+              <p className="font-sans-clean text-xs text-[#77736B] font-light mt-1 flex items-start gap-1.5">
+                <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" aria-hidden="true" />
+                <span>{STUDIO_INFO.address}</span>
               </p>
+              <a
+                href={`tel:${STUDIO_INFO.phone}`}
+                className="font-sans-clean text-xs text-[#111111] hover:text-[#7D836D] transition-colors flex items-center gap-1.5 mt-2"
+              >
+                <Phone className="w-3.5 h-3.5" aria-hidden="true" />
+                {STUDIO_INFO.phoneDisplay}
+              </a>
             </div>
 
-            {/* Social Icons */}
             <div className="flex items-center gap-4 pt-1">
               <a
                 href={STUDIO_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:text-white hover:bg-[#7D836D] hover:border-[#7D836D] transition-all"
-                aria-label="Instagram"
+                className="w-8 h-8 rounded-full border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:text-white hover:bg-[#7D836D] hover:border-[#7D836D] transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D]"
+                aria-label="Sumit Studio on Instagram"
               >
-                <Instagram className="w-3.5 h-3.5 stroke-[1.5]" />
+                <Instagram className="w-3.5 h-3.5 stroke-[1.5]" aria-hidden="true" />
               </a>
               <a
                 href={STUDIO_INFO.youtubeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:text-white hover:bg-[#7D836D] hover:border-[#7D836D] transition-all"
-                aria-label="YouTube"
+                className="w-8 h-8 rounded-full border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:text-white hover:bg-[#7D836D] hover:border-[#7D836D] transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D]"
+                aria-label="Sumit Studio on YouTube"
               >
-                <Youtube className="w-3.5 h-3.5 stroke-[1.5]" />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:text-white hover:bg-[#7D836D] hover:border-[#7D836D] transition-all"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-3.5 h-3.5 stroke-[1.5]" />
+                <Youtube className="w-3.5 h-3.5 stroke-[1.5]" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -168,7 +166,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           <div className="tracking-wider">
-            © 2024 Sumit Studio. All Rights Reserved.
+            © {new Date().getFullYear()} Sumit Studio. All Rights Reserved.
           </div>
         </div>
       </div>

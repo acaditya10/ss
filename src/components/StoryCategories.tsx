@@ -1,10 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { STORY_CATEGORIES } from '../data/portfolioData';
 import { StoryCategory } from '../types';
 import { ArrowRight, X } from 'lucide-react';
 
 export const StoryCategories: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<StoryCategory | null>(null);
+
+  useEffect(() => {
+    if (!activeCategory) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveCategory(null);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [activeCategory]);
 
   return (
     <section id="stories" className="w-full py-16 sm:py-24 bg-[#F7F5F0]">
@@ -39,8 +53,16 @@ export const StoryCategories: React.FC = () => {
           {STORY_CATEGORIES.map((cat) => (
             <div
               key={cat.id}
+              role="button"
+              tabIndex={0}
               onClick={() => setActiveCategory(cat)}
-              className="group flex flex-col cursor-pointer select-none"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setActiveCategory(cat);
+                }
+              }}
+              className="group flex flex-col cursor-pointer select-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#7D836D]"
             >
               {/* Image thumbnail: edge-to-edge, no rounded corners */}
               <div className="relative aspect-[3/4] overflow-hidden bg-[#151515]/5 rounded-none mb-3">
@@ -73,6 +95,9 @@ export const StoryCategories: React.FC = () => {
       {/* Story Category Details Modal */}
       {activeCategory && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${activeCategory.name} occasion details`}
           className="fixed inset-0 z-50 bg-black/85 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6"
           onClick={() => setActiveCategory(null)}
         >

@@ -16,7 +16,7 @@ export const LogoSvg: React.FC<{
   className?: string;
 }> = ({ color = 'currentColor', className = 'w-auto h-10' }) => {
   const isLightInk = color === '#FFFFFF' || color === '#fff' || color === 'white' || color === 'currentColor';
-  const src = isLightInk ? '/ss-white.png' : '/ss-black.png';
+  const src = isLightInk ? '/ss-white.webp' : '/ss-black.webp';
   return (
     <img
       src={src}
@@ -35,7 +35,7 @@ export const Logo: React.FC<LogoProps> = ({
   theme = 'light',
 }) => {
   const isDark = theme === 'dark';
-  const logoSrc = isDark ? '/ss-white.png' : '/ss-black.png';
+  const logoSrc = isDark ? '/ss-white.webp' : '/ss-black.webp';
   const subtextColor = isDark ? 'text-white/70' : 'text-[#77736B]';
 
   // Standalone: brand lockup with tagline
@@ -73,7 +73,7 @@ export const Logo: React.FC<LogoProps> = ({
         {/* Focal Brand Logo Artwork — white mark for dark backdrop */}
         <div className="relative my-1 sm:my-2 w-full max-w-[340px] sm:max-w-[500px] md:max-w-[620px] lg:max-w-[720px] drop-shadow-xl">
           <img
-            src="/ss-white.png"
+            src="/ss-white.webp"
             alt="Sumit Studio"
             className="w-full h-auto object-contain"
             draggable={false}
@@ -93,7 +93,7 @@ export const Logo: React.FC<LogoProps> = ({
     return (
       <div className={`flex flex-col items-start select-none ${className}`}>
         <img
-          src="/ss-black.png"
+          src="/ss-black.webp"
           alt="Sumit Studio"
           className="w-44 sm:w-52 h-auto object-contain -ml-1"
           draggable={false}
@@ -114,7 +114,7 @@ export const Logo: React.FC<LogoProps> = ({
       {/* Black wordmark for light header */}
       <div className="transition-transform duration-300 group-hover:scale-105">
         <img
-          src={isDark ? '/ss-white.png' : '/ss-black.png'}
+          src={isDark ? '/ss-white.webp' : '/ss-black.webp'}
           alt="Sumit Studio"
           className="w-32 sm:w-40 md:w-44 h-auto object-contain"
           draggable={false}

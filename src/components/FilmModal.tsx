@@ -13,8 +13,15 @@ export const FilmModal: React.FC<FilmModalProps> = ({ film, isOpen, onClose }) =
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) onClose();
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    if (isOpen) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = prev;
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }
   }, [isOpen, onClose]);
 
   if (!isOpen || !film) return null;
@@ -22,6 +29,9 @@ export const FilmModal: React.FC<FilmModalProps> = ({ film, isOpen, onClose }) =
   return (
     <div
       id="film-cinema-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${film.title} video player`}
       className="fixed inset-0 z-50 bg-[#111111]/95 backdrop-blur-md flex flex-col justify-between p-4 sm:p-8 animate-fade-up select-none"
       onClick={onClose}
     >

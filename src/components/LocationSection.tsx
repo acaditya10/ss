@@ -1,6 +1,6 @@
 import React from 'react';
 import { STUDIO_INFO } from '../data/portfolioData';
-import { MapPin, Phone, Mail, Clock, ExternalLink, Star, Compass } from 'lucide-react';
+import { MapPin, Phone, Clock, ExternalLink, Star, Compass } from 'lucide-react';
 
 export const LocationSection: React.FC = () => {
   return (
@@ -23,8 +23,8 @@ export const LocationSection: React.FC = () => {
               <div className="hidden lg:block flex-1 h-[1px] bg-[#111111]/20 ml-4 mb-2" />
             </div>
 
-            <p className="font-sans-clean text-xs sm:text-sm text-[#77736B] max-w-md font-light">
-              Located in Krishna Nagar, East Delhi. Available for destination weddings and pre-wedding shoots across India and worldwide.
+              <p className="font-sans-clean text-xs sm:text-sm text-[#77736B] max-w-md font-light">
+              Satnam Park, Krishna Nagar, East Delhi. Available for destination weddings and pre-wedding shoots across India and worldwide.
             </p>
           </div>
         </div>
@@ -41,7 +41,7 @@ export const LocationSection: React.FC = () => {
                     {STUDIO_INFO.name}
                   </h3>
                   <p className="font-sans-clean text-[11px] tracking-[0.2em] text-[#77736B] uppercase font-light mt-1">
-                    ESTD {STUDIO_INFO.established} · {STUDIO_INFO.experienceYears}+ YEARS HERITAGE
+                    ESTD {STUDIO_INFO.established} · {STUDIO_INFO.experienceYears}+ YEARS OF CRAFT
                   </p>
                 </div>
 
@@ -57,7 +57,7 @@ export const LocationSection: React.FC = () => {
                     <Star className="w-3.5 h-3.5 fill-[#EAB308] text-[#EAB308]" />
                   </div>
                   <span className="text-[8px] font-sans-clean tracking-wider text-[#77736B] uppercase">
-                    {STUDIO_INFO.reviewCount}+ REVIEWS
+                    {STUDIO_INFO.reviewCount} REVIEWS
                   </span>
                 </a>
               </div>
@@ -77,7 +77,7 @@ export const LocationSection: React.FC = () => {
                       {STUDIO_INFO.address}
                     </p>
                     <p className="font-sans-clean text-xs text-[#77736B] font-light mt-0.5">
-                      Opposite Anangpur Charitable Trust, Krishna Nagar, Delhi
+                      Satnam Park, Block H · Krishna Nagar, Delhi
                     </p>
                   </div>
                 </div>
@@ -98,31 +98,19 @@ export const LocationSection: React.FC = () => {
                       {STUDIO_INFO.phoneDisplay}
                     </a>
                     <a
+                      href={`tel:${STUDIO_INFO.phone2}`}
+                      className="font-sans-clean text-sm text-[#111111]/80 font-light hover:text-[#7D836D] transition-colors block"
+                    >
+                      {STUDIO_INFO.phone2Display}
+                    </a>
+                    <a
                       href={`https://wa.me/${STUDIO_INFO.whatsapp}?text=Hi%20Sumit%20Studio,%20I%20would%20like%20to%20inquire%20about%20wedding%20photography%20services.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-[#7D836D] hover:underline font-sans-clean mt-1"
+                      className="inline-flex items-center gap-1.5 text-xs text-[#7D836D] hover:underline font-sans-clean mt-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D]"
                     >
                       <span>Chat on WhatsApp</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="flex items-start gap-4">
-                  <div className="w-9 h-9 rounded-full bg-[#111111]/5 flex items-center justify-center shrink-0 mt-0.5">
-                    <Mail className="w-4 h-4 text-[#111111]" />
-                  </div>
-                  <div>
-                    <h4 className="font-sans-clean text-[10px] tracking-[0.2em] uppercase text-[#77736B] font-medium">
-                      EMAIL
-                    </h4>
-                    <a
-                      href={`mailto:${STUDIO_INFO.email}`}
-                      className="font-sans-clean text-sm text-[#111111] font-light hover:text-[#7D836D] transition-colors block mt-1"
-                    >
-                      {STUDIO_INFO.email}
+                      <ExternalLink className="w-3 h-3" aria-hidden="true" />
                     </a>
                   </div>
                 </div>
@@ -177,7 +165,7 @@ export const LocationSection: React.FC = () => {
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="tracking-[0.18em] uppercase text-[10px] text-white/90">
-                  SUMIT STUDIO · KRISHNA NAGAR, DELHI
+                  SUMIT STUDIO · SATNAM PARK, KRISHNA NAGAR
                 </span>
               </div>
               <a
@@ -214,7 +202,7 @@ export const LocationSection: React.FC = () => {
                   Sumit Studio
                 </p>
                 <p className="font-sans-clean text-[11px] text-[#77736B] mt-0.5 line-clamp-2">
-                  H4/1, Krishna Nagar, Delhi - 110051 (Opp. Anangpur Charitable Trust)
+                  {STUDIO_INFO.address}
                 </p>
                 <a
                   href={STUDIO_INFO.googleMapsUrl}

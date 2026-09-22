@@ -34,12 +34,15 @@ export const InstagramGrid: React.FC = () => {
           {INSTAGRAM_PHOTOS.map((photo: InstagramItem) => (
             <a
               key={photo.id}
-              href={STUDIO_INFO.instagramUrl}
+              href={photo.url}
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => setHoveredId(photo.id)}
               onMouseLeave={() => setHoveredId(null)}
-              className="group relative aspect-square overflow-hidden bg-[#151515]/5 select-none rounded-none block cursor-pointer"
+              onFocus={() => setHoveredId(photo.id)}
+              onBlur={() => setHoveredId(null)}
+              className="group relative aspect-square overflow-hidden bg-[#151515]/5 select-none rounded-none block cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D]"
+              aria-label={photo.caption}
             >
               <img
                 src={photo.image}
@@ -48,14 +51,13 @@ export const InstagramGrid: React.FC = () => {
                 loading="lazy"
               />
 
-              {/* Subtle hover overlay */}
               <div
                 className={`absolute inset-0 bg-black/40 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-2 ${
                   hoveredId === photo.id ? 'opacity-100' : 'opacity-0'
                 }`}
               >
                 <div className="flex items-center gap-1 text-xs font-sans-clean">
-                  <Heart className="w-3.5 h-3.5 fill-white text-white" />
+                  <Heart className="w-3.5 h-3.5 fill-white text-white" aria-hidden="true" />
                   <span className="tracking-widest text-[10px]">{photo.likes}</span>
                 </div>
                 <span className="text-[8px] font-sans-clean tracking-widest uppercase text-white/80 mt-1">

@@ -79,7 +79,7 @@ export const Testimonials: React.FC = () => {
               <button
                 type="button"
                 onClick={handlePrev}
-                className="w-9 h-9 border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:bg-[#7D836D] hover:text-white hover:border-[#7D836D] transition-colors focus:outline-none"
+                className="w-9 h-9 border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:bg-[#7D836D] hover:text-white hover:border-[#7D836D] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D]"
                 aria-label="Previous client testimonial"
               >
                 <ChevronLeft className="w-4 h-4 stroke-[1.5]" />
@@ -87,7 +87,7 @@ export const Testimonials: React.FC = () => {
               <button
                 type="button"
                 onClick={handleNext}
-                className="w-9 h-9 border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:bg-[#7D836D] hover:text-white hover:border-[#7D836D] transition-colors focus:outline-none"
+                className="w-9 h-9 border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:bg-[#7D836D] hover:text-white hover:border-[#7D836D] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D]"
                 aria-label="Next client testimonial"
               >
                 <ChevronRight className="w-4 h-4 stroke-[1.5]" />

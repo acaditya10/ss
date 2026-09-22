@@ -7,7 +7,7 @@ export const PortfolioGrid: React.FC = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
 
-  const displayedItems = showAll ? PORTFOLIO_ITEMS : PORTFOLIO_ITEMS.slice(0, 12);
+  const displayedItems = showAll ? PORTFOLIO_ITEMS : PORTFOLIO_ITEMS.slice(0, 8);
 
   const handleOpen = (index: number) => {
     setSelectedIndex(index);
@@ -53,10 +53,12 @@ export const PortfolioGrid: React.FC = () => {
         {/* 4 Columns x 3 Rows Dense Editorial Image Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-2.5">
           {displayedItems.map((item, index) => (
-            <div
+            <button
               key={item.id}
+              type="button"
               onClick={() => handleOpen(index)}
-              className="group relative aspect-[4/3] sm:aspect-[5/4] overflow-hidden bg-[#151515]/5 cursor-pointer select-none rounded-none"
+              className="group relative aspect-[4/3] sm:aspect-[5/4] overflow-hidden bg-[#151515]/5 cursor-pointer select-none rounded-none p-0 border-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D] text-left"
+              aria-label={`View ${item.title} — ${item.location}`}
             >
               {/* Image */}
               <img
@@ -78,7 +80,7 @@ export const PortfolioGrid: React.FC = () => {
                   {item.title}
                 </span>
               </div>
-            </div>
+            </button>
           ))}
         </div>
 
@@ -87,10 +89,11 @@ export const PortfolioGrid: React.FC = () => {
           <button
             type="button"
             onClick={() => setShowAll(!showAll)}
-            className="group inline-flex items-center gap-3 px-7 py-3.5 bg-[#7D836D] hover:bg-[#686E58] text-white text-xs font-sans-clean tracking-[0.22em] uppercase rounded-none transition-all duration-300 focus:outline-none shadow-sm"
+            aria-expanded={showAll}
+            className="group inline-flex items-center gap-3 px-7 py-3.5 bg-[#7D836D] hover:bg-[#686E58] text-white text-xs font-sans-clean tracking-[0.22em] uppercase rounded-none transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7D836D] shadow-sm"
           >
-            <span>{showAll ? 'SHOW LESS' : 'VIEW FULL PORTFOLIO'}</span>
-            <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+            <span>{showAll ? 'SHOW LESS' : `VIEW ALL ${PORTFOLIO_ITEMS.length} STORIES`}</span>
+            <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </button>
         </div>
       </div>
