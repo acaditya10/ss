@@ -191,19 +191,22 @@ export const LocationSection: React.FC = () => {
               </a>
             </div>
 
-            {/* Embedded Google Map Iframe */}
+            {/* Static map preview (local OSM tile stitch) linking to Google Maps */}
             <div className="relative flex-1 w-full min-h-[360px]">
-              <iframe
-                title="Sumit Studio Krishna Nagar Delhi Google Maps"
-                src={STUDIO_INFO.googleMapsEmbed}
-                width="100%"
-                height="100%"
-                style={{ border: 0, minHeight: '380px' }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full filter saturate-[0.9] contrast-[1.05]"
-              />
+              <a
+                href={STUDIO_INFO.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full h-full min-h-[380px]"
+                aria-label="Open Sumit Studio location in Google Maps"
+              >
+                <img
+                  src="/images/maps-studio.png"
+                  alt="Map of Sumit Studio, Krishna Nagar, Delhi"
+                  className="w-full h-full object-cover filter saturate-[0.9] contrast-[1.05]"
+                  loading="lazy"
+                />
+              </a>
 
               {/* Floating Overlay Card on Map */}
               <div className="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-white/95 backdrop-blur-xs p-3.5 border border-[#111111]/10 shadow-lg">

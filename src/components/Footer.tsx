@@ -1,5 +1,6 @@
 import React from 'react';
 import { Logo } from './Logo';
+import { STUDIO_INFO } from '../data/portfolioData';
 import { Instagram, Youtube, Facebook } from 'lucide-react';
 
 interface FooterProps {
@@ -113,7 +114,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {/* Social Icons */}
             <div className="flex items-center gap-4 pt-1">
               <a
-                href="https://instagram.com"
+                href={STUDIO_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:text-white hover:bg-[#7D836D] hover:border-[#7D836D] transition-all"
@@ -122,7 +123,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <Instagram className="w-3.5 h-3.5 stroke-[1.5]" />
               </a>
               <a
-                href="https://youtube.com"
+                href={STUDIO_INFO.youtubeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full border border-[#111111]/20 flex items-center justify-center text-[#111111] hover:text-white hover:bg-[#7D836D] hover:border-[#7D836D] transition-all"

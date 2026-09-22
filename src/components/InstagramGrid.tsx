@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { INSTAGRAM_PHOTOS } from '../data/portfolioData';
+import { INSTAGRAM_PHOTOS, STUDIO_INFO } from '../data/portfolioData';
 import { InstagramItem } from '../types';
 import { Instagram, Heart } from 'lucide-react';
 
@@ -19,12 +19,12 @@ export const InstagramGrid: React.FC = () => {
           </div>
 
           <a
-            href="https://instagram.com"
+            href={STUDIO_INFO.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="font-sans-clean text-xs tracking-[0.2em] uppercase text-[#111111] hover:text-[#7D836D] transition-colors flex items-center gap-1.5"
           >
-            <span>@SUMITSTUDIO</span>
+            <span>{STUDIO_INFO.instagramHandle}</span>
             <Instagram className="w-3.5 h-3.5 stroke-[1.5]" />
           </a>
         </div>
@@ -34,7 +34,7 @@ export const InstagramGrid: React.FC = () => {
           {INSTAGRAM_PHOTOS.map((photo: InstagramItem) => (
             <a
               key={photo.id}
-              href="https://instagram.com"
+              href={STUDIO_INFO.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => setHoveredId(photo.id)}

@@ -8,88 +8,24 @@ export interface LogoProps {
 }
 
 /**
- * Official Sumit Studio Logo Vector Component
- * Faithfully reproduces the brand identity:
- * - High-contrast Roman Didone serif for "SUMIT" with wide luxury tracking
- * - Overlaid signature calligraphy script for "Studio"
- * - Dynamic brush stroke underline flourish
+ * Official Sumit Studio logo assets.
+ * Black wordmark for light backgrounds, white wordmark for dark backgrounds.
  */
 export const LogoSvg: React.FC<{
   color?: string;
   className?: string;
-  showFlourish?: boolean;
-}> = ({ color = 'currentColor', className = 'w-auto h-10', showFlourish = true }) => {
+}> = ({ color = 'currentColor', className = 'w-auto h-10' }) => {
+  const isLightInk = color === '#FFFFFF' || color === '#fff' || color === 'white' || color === 'currentColor';
+  const src = isLightInk ? '/ss-white.png' : '/ss-black.png';
   return (
-    <svg
-      viewBox="0 0 520 180"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={`select-none overflow-visible ${className}`}
+    <img
+      src={src}
+      alt="Sumit Studio"
+      className={`select-none object-contain ${className}`}
+      draggable={false}
       aria-label="Sumit Studio Logo"
       role="img"
-    >
-      {/* Main Uppercase Serif Wordmark: SUMIT */}
-      <text
-        x="245"
-        y="96"
-        textAnchor="middle"
-        fill={color}
-        className="font-serif-luxury"
-        style={{
-          fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
-          fontSize: '92px',
-          fontWeight: 500,
-          letterSpacing: '0.26em',
-          textTransform: 'uppercase',
-        }}
-      >
-        SUMIT
-      </text>
-
-      {/* Overlaid Signature Script: Studio */}
-      <g transform="translate(170, 138) rotate(-3.5)">
-        <text
-          x="0"
-          y="0"
-          fill={color}
-          className="font-script-signature"
-          style={{
-            fontFamily: "'Alex Brush', 'Great Vibes', 'Pinyon Script', cursive",
-            fontSize: '88px',
-            fontStyle: 'italic',
-          }}
-        >
-          Studio
-        </text>
-      </g>
-
-      {/* Expressive Brush Flourish Underline Stroke */}
-      {showFlourish && (
-        <g>
-          {/* Main tapered brush stroke */}
-          <path
-            d="M 160 148 Q 280 162 450 141 Q 310 156 160 148 Z"
-            fill={color}
-            opacity="0.8"
-          />
-          {/* Subtle secondary stroke for dry-brush effect */}
-          <path
-            d="M 195 150 Q 300 161 425 143"
-            stroke={color}
-            strokeWidth="1.2"
-            strokeLinecap="round"
-            opacity="0.9"
-          />
-          <path
-            d="M 235 152 Q 330 160 395 146"
-            stroke={color}
-            strokeWidth="0.6"
-            strokeLinecap="round"
-            opacity="0.5"
-          />
-        </g>
-      )}
-    </svg>
+    />
   );
 };
 
@@ -99,14 +35,19 @@ export const Logo: React.FC<LogoProps> = ({
   theme = 'light',
 }) => {
   const isDark = theme === 'dark';
-  const color = isDark ? '#FFFFFF' : '#111111';
+  const logoSrc = isDark ? '/ss-white.png' : '/ss-black.png';
   const subtextColor = isDark ? 'text-white/70' : 'text-[#77736B]';
 
-  // Standalone: Pure vector logo
+  // Standalone: brand lockup with tagline
   if (variant === 'standalone') {
     return (
       <div className={`inline-flex flex-col items-center select-none ${className}`}>
-        <LogoSvg color={color} className="w-48 sm:w-60 h-auto" />
+        <img
+          src={logoSrc}
+          alt="Sumit Studio"
+          className="w-48 sm:w-60 h-auto object-contain"
+          draggable={false}
+        />
         <span
           className={`font-sans-clean text-[9px] tracking-[0.3em] uppercase ${subtextColor} mt-1`}
         >
@@ -116,7 +57,7 @@ export const Logo: React.FC<LogoProps> = ({
     );
   }
 
-  // Hero: Grand focal display
+  // Hero: grand focal display on dark video background
   if (variant === 'hero') {
     return (
       <div className={`flex flex-col items-center text-center select-none ${className}`}>
@@ -129,9 +70,14 @@ export const Logo: React.FC<LogoProps> = ({
           <div className="w-8 sm:w-14 h-[1px] bg-white/70" />
         </div>
 
-        {/* Focal Brand Logo Artwork */}
+        {/* Focal Brand Logo Artwork — white mark for dark backdrop */}
         <div className="relative my-1 sm:my-2 w-full max-w-[340px] sm:max-w-[500px] md:max-w-[620px] lg:max-w-[720px] drop-shadow-xl">
-          <LogoSvg color="#FFFFFF" className="w-full h-auto" />
+          <img
+            src="/ss-white.png"
+            alt="Sumit Studio"
+            className="w-full h-auto object-contain"
+            draggable={false}
+          />
         </div>
 
         {/* Subtitle */}
@@ -142,11 +88,16 @@ export const Logo: React.FC<LogoProps> = ({
     );
   }
 
-  // Footer: Brand column
+  // Footer: brand column on light ivory background
   if (variant === 'footer') {
     return (
       <div className={`flex flex-col items-start select-none ${className}`}>
-        <LogoSvg color={color} className="w-44 sm:w-52 h-auto -ml-1" />
+        <img
+          src="/ss-black.png"
+          alt="Sumit Studio"
+          className="w-44 sm:w-52 h-auto object-contain -ml-1"
+          draggable={false}
+        />
         <p className="font-sans-clean text-[9px] sm:text-[10px] tracking-[0.28em] text-[#77736B] uppercase font-light mt-1 pl-1">
           PHOTOGRAPHY & FILMS
         </p>
@@ -157,12 +108,17 @@ export const Logo: React.FC<LogoProps> = ({
     );
   }
 
-  // Header: Horizontal navbar lockup
+  // Header: horizontal navbar lockup on light ivory background
   return (
     <div className={`flex items-center gap-3 select-none ${className}`}>
-      {/* The official logo rendered at navbar height */}
+      {/* Black wordmark for light header */}
       <div className="transition-transform duration-300 group-hover:scale-105">
-        <LogoSvg color={color} className="w-32 sm:w-40 md:w-44 h-auto" />
+        <img
+          src={isDark ? '/ss-white.png' : '/ss-black.png'}
+          alt="Sumit Studio"
+          className="w-32 sm:w-40 md:w-44 h-auto object-contain"
+          draggable={false}
+        />
       </div>
 
       {/* Subtle vertical hairline divider */}

@@ -156,7 +156,7 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
             </div>
             <div className="text-left sm:text-right">
               <p>Available Across India & Worldwide</p>
-              <p className="text-[#7D836D]">inquiries@sumitstudio.com</p>
+              <p className="text-[#7D836D]">info@sumitstudio.com</p>
             </div>
           </div>
         </div>

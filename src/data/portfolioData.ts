@@ -28,14 +28,14 @@ export const STUDIO_INFO = {
 
 // Hero background poster & metadata
 export const HERO_IMAGE = {
-  src: 'https://i.ytimg.com/vi/AYOeKL3VNPA/maxresdefault.jpg',
+  src: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
   alt: 'Sumit Studio - Madhav & Niharika Goa Pre-Wedding Cinematography',
   subtitle: 'WEDDING PHOTOGRAPHY & CINEMATOGRAPHY',
 };
 
 // 40+ Years heritage intro image
 export const INTRO_IMAGE = {
-  src: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1600&auto=format&fit=crop',
+  src: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
   alt: '40+ Years of Capturing Timeless Indian Weddings - Sumit Studio Delhi',
 };
 
@@ -46,7 +46,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Madhav & Niharika',
     category: 'Pre-Wedding',
     location: 'Goa Coastal Shores',
-    image: 'https://i.ytimg.com/vi/AYOeKL3VNPA/maxresdefault.jpg',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     alt: 'Madhav & Niharika pre-wedding photoshoot on Goa beaches by Sumit Studio',
   },
   {
@@ -54,7 +54,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Abhishek & Himanshi',
     category: 'Weddings',
     location: 'Jim Corbett National Park',
-    image: 'https://i.ytimg.com/vi/UPtI04xC71k/maxresdefault.jpg',
+    image: '/images/yt/UPtI04xC71k-maxresdefault.jpg',
     alt: 'Abhishek & Himanshi destination wedding ceremony in Jim Corbett',
   },
   {
@@ -62,7 +62,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Prarit & Simran',
     category: 'Pre-Wedding',
     location: 'Delhi NCR Luxury Estate',
-    image: 'https://i.ytimg.com/vi/x0dr-294WOw/maxresdefault.jpg',
+    image: '/images/yt/x0dr-294WOw-maxresdefault.jpg',
     alt: 'Prarit & Simran editorial pre-wedding photoshoot by Sumit Studio',
   },
   {
@@ -70,7 +70,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Manvi & Hardik',
     category: 'Celebrations',
     location: 'The Leela Palace, New Delhi',
-    image: 'https://i.ytimg.com/vi/nN635qR7ifI/maxresdefault.jpg',
+    image: '/images/yt/nN635qR7ifI-maxresdefault.jpg',
     alt: 'Manvi & Hardik royal engagement ceremony celebrations',
   },
   {
@@ -78,7 +78,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Anuragh & Annu',
     category: 'Pre-Wedding',
     location: 'Picture Villa, Delhi NCR',
-    image: 'https://i.ytimg.com/vi/4nBk7dJSULA/maxresdefault.jpg',
+    image: '/images/yt/4nBk7dJSULA-maxresdefault.jpg',
     alt: 'Anuragh & Annu romantic set photoshoot at Picture Villa',
   },
   {
@@ -86,7 +86,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Dhruv & Navya',
     category: 'Pre-Wedding',
     location: 'Goa Sunset Cliffs',
-    image: 'https://i.ytimg.com/vi/Exrv6mdcRpM/maxresdefault.jpg',
+    image: '/images/yt/Exrv6mdcRpM-maxresdefault.jpg',
     alt: 'Dhruv & Navya sunset romance on Goa shores by Sumit Studio',
   },
   {
@@ -94,7 +94,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'The Regal Royal Bride',
     category: 'Bridal Portrait',
     location: 'The Leela Palace, New Delhi',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     alt: 'Traditional Indian bride adorned in heritage gold zardozi lehenga and polki jewelry',
   },
   {
@@ -102,7 +102,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Vows Under The Floral Mandap',
     category: 'Weddings',
     location: 'Taj Mahal Hotel, New Delhi',
-    image: 'https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1400&auto=format&fit=crop',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     alt: 'Sacred wedding ceremony rituals under marigold and tuberose mandap canopy',
   },
   {
@@ -110,7 +110,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Mehendi & Solah Shringar',
     category: 'Details',
     location: 'ITC Grand Bharat, Gurgaon',
-    image: 'https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?q=80&w=1400&auto=format&fit=crop',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     alt: 'Intricate bridal henna artistry and solitaires on bride hands',
   },
   {
@@ -118,7 +118,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'The Rain of Petals',
     category: 'Weddings',
     location: 'Noor Mahal Palace, Karnal',
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1400&auto=format&fit=crop',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     alt: 'Joyful blessing with rose petals during sacred Vedic phere rounds',
   },
   {
@@ -126,7 +126,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Abha & Ashish',
     category: 'Pre-Wedding',
     location: 'Heritage Fort Haveli',
-    image: 'https://i.ytimg.com/vi/gcxzr_kSEzY/hqdefault.jpg',
+    image: '/images/yt/gcxzr_kSEzY-hqdefault.jpg',
     alt: 'Abha & Ashish timeless pre-wedding film by Sumit Studio',
   },
   {
@@ -134,7 +134,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Sangeet Midnight Revelry',
     category: 'Celebrations',
     location: 'JW Marriott Aerocity, New Delhi',
-    image: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=1400&auto=format&fit=crop',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     alt: 'High energy dance floor moments with family and friends at sangeet night',
   },
 ];
@@ -145,7 +145,7 @@ export const STORY_CATEGORIES: StoryCategory[] = [
     id: 'cat-weddings',
     name: 'WEDDINGS',
     slug: 'weddings',
-    image: 'https://images.unsplash.com/photo-1545232979-8bf68ee9b1af?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     tagline: 'SACRED VOWS & GRANDEUR',
     count: 320,
     description: 'Documenting the rituals, solemn vows, and lavish celebrations across royal palaces and intimate heritage spaces.',
@@ -154,7 +154,7 @@ export const STORY_CATEGORIES: StoryCategory[] = [
     id: 'cat-pre-weddings',
     name: 'PRE-WEDDINGS',
     slug: 'pre-weddings',
-    image: 'https://i.ytimg.com/vi/AYOeKL3VNPA/maxresdefault.jpg',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     tagline: 'INTIMATE ROMANTIC STORIES',
     count: 245,
     description: 'Cinematic visual love stories filmed in Goa beaches, Jim Corbett, historic monuments, and luxury scenic estates.',
@@ -163,7 +163,7 @@ export const STORY_CATEGORIES: StoryCategory[] = [
     id: 'cat-films',
     name: 'FILMS',
     slug: 'films',
-    image: 'https://i.ytimg.com/vi/UPtI04xC71k/maxresdefault.jpg',
+    image: '/images/yt/UPtI04xC71k-maxresdefault.jpg',
     tagline: 'CINEMATIC MOTION PICTURES',
     count: 180,
     description: 'High-definition 4K cinematic teasers, emotional same-day edits, and documentary feature films with custom sound design.',
@@ -172,7 +172,7 @@ export const STORY_CATEGORIES: StoryCategory[] = [
     id: 'cat-engagements',
     name: 'ENGAGEMENTS',
     slug: 'engagements',
-    image: 'https://i.ytimg.com/vi/nN635qR7ifI/maxresdefault.jpg',
+    image: '/images/yt/nN635qR7ifI-maxresdefault.jpg',
     tagline: 'PROMISES OF FOREVER',
     count: 160,
     description: 'The beginning of forever captured through timeless ring exchanges, elegant cocktail soirees, and family blessings.',
@@ -181,7 +181,7 @@ export const STORY_CATEGORIES: StoryCategory[] = [
     id: 'cat-haldi',
     name: 'HALDI & MEHENDI',
     slug: 'haldi',
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     tagline: 'MARIGOLD SUNSHINE & LAUGHTER',
     count: 210,
     description: 'Vibrant yellow ceremonies filled with turmeric splash, floral showers, water play, and unfiltered laughter.',
@@ -190,7 +190,7 @@ export const STORY_CATEGORIES: StoryCategory[] = [
     id: 'cat-bridal-portraits',
     name: 'BRIDAL PORTRAITS',
     slug: 'bridal-portraits',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     tagline: 'POISE, BEAUTY & TIMELESS GRACE',
     count: 295,
     description: 'Quiet, reflective portraits celebrating the bride in her heritage finery, jewelry, and authentic emotions.',
@@ -205,7 +205,7 @@ export const CINEMATIC_FILMS: FilmItem[] = [
     couple: 'Madhav & Niharika',
     location: 'Goa Coastal Shores',
     duration: '04:12',
-    thumbnail: 'https://i.ytimg.com/vi/AYOeKL3VNPA/maxresdefault.jpg',
+    thumbnail: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     youtubeId: 'AYOeKL3VNPA',
     description: 'Romantic cinematic pre-wedding film set across golden beaches, crashing waves and antique Portuguese heritage in Goa by Sumit Studio.',
   },
@@ -215,7 +215,7 @@ export const CINEMATIC_FILMS: FilmItem[] = [
     couple: 'Abhishek & Himanshi',
     location: 'Jim Corbett National Park',
     duration: '05:34',
-    thumbnail: 'https://i.ytimg.com/vi/UPtI04xC71k/maxresdefault.jpg',
+    thumbnail: '/images/yt/UPtI04xC71k-maxresdefault.jpg',
     youtubeId: 'UPtI04xC71k',
     description: 'Same Day Edit wedding film surrounded by the wild forests, misty riverbanks, and royal celebratory nights at Jim Corbett.',
   },
@@ -225,7 +225,7 @@ export const CINEMATIC_FILMS: FilmItem[] = [
     couple: 'Prarit & Simran',
     location: 'Delhi NCR Luxury Estate',
     duration: '04:45',
-    thumbnail: 'https://i.ytimg.com/vi/x0dr-294WOw/maxresdefault.jpg',
+    thumbnail: '/images/yt/x0dr-294WOw-maxresdefault.jpg',
     youtubeId: 'x0dr-294WOw',
     description: 'Grand luxury pre-wedding cinematic film with high-fashion aesthetics, dramatic drone cinematography and sweeping emotional arcs.',
   },
@@ -235,7 +235,7 @@ export const CINEMATIC_FILMS: FilmItem[] = [
     couple: 'Manvi & Hardik',
     location: 'The Leela Palace, New Delhi',
     duration: '03:40',
-    thumbnail: 'https://i.ytimg.com/vi/nN635qR7ifI/maxresdefault.jpg',
+    thumbnail: '/images/yt/nN635qR7ifI-maxresdefault.jpg',
     youtubeId: 'nN635qR7ifI',
     description: 'High-energy engagement ceremony teaser filled with emotional family blessings, dance performances, and regal attire.',
   },
@@ -245,7 +245,7 @@ export const CINEMATIC_FILMS: FilmItem[] = [
     couple: 'Anuragh & Annu',
     location: 'Picture Villa, Delhi NCR',
     duration: '04:02',
-    thumbnail: 'https://i.ytimg.com/vi/4nBk7dJSULA/maxresdefault.jpg',
+    thumbnail: '/images/yt/4nBk7dJSULA-maxresdefault.jpg',
     youtubeId: '4nBk7dJSULA',
     description: 'Vibrant celebration shoot featuring bespoke romantic set designs, dreamy florals and joyful moments.',
   },
@@ -255,7 +255,7 @@ export const CINEMATIC_FILMS: FilmItem[] = [
     couple: 'Abha & Ashish',
     location: 'Heritage Fort Haveli',
     duration: '04:18',
-    thumbnail: 'https://i.ytimg.com/vi/gcxzr_kSEzY/hqdefault.jpg',
+    thumbnail: '/images/yt/gcxzr_kSEzY-hqdefault.jpg',
     youtubeId: 'gcxzr_kSEzY',
     description: 'Soulful, poetic pre-wedding capturing tender moments between historical palace columns and lush gardens.',
   },
@@ -265,7 +265,7 @@ export const CINEMATIC_FILMS: FilmItem[] = [
     couple: 'Dhruv & Navya',
     location: 'Goa Coastal Cliffs',
     duration: '03:15',
-    thumbnail: 'https://i.ytimg.com/vi/Exrv6mdcRpM/maxresdefault.jpg',
+    thumbnail: '/images/yt/Exrv6mdcRpM-maxresdefault.jpg',
     youtubeId: 'Exrv6mdcRpM',
     description: 'Golden hour romance on Goa shores featuring dramatic sunset drone cinematics and barefoot shoreline walks.',
   },
@@ -317,13 +317,13 @@ export const TESTIMONIALS: TestimonialItem[] = [
 
 // Testimonial photo: Couple portrait in evening reception attire
 export const TESTIMONIAL_COUPLE_IMAGE = {
-  src: 'https://i.ytimg.com/vi/AYOeKL3VNPA/maxresdefault.jpg',
+  src: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
   alt: 'Madhav & Niharika pre-wedding film portrait by Sumit Studio',
 };
 
 // Editorial Card Image for Inquiry Section
 export const INQUIRY_CARD_IMAGE = {
-  src: 'https://images.unsplash.com/photo-1546804784-896d0dca3805?q=80&w=1000&auto=format&fit=crop',
+  src: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
   alt: 'Good Photos Better People - Sumit Studio Art Card',
 };
 
@@ -331,49 +331,49 @@ export const INQUIRY_CARD_IMAGE = {
 export const INSTAGRAM_PHOTOS: InstagramItem[] = [
   {
     id: 'insta-1',
-    image: 'https://i.ytimg.com/vi/AYOeKL3VNPA/maxresdefault.jpg',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     alt: 'Madhav & Niharika in Goa @sumit.studio',
     likes: '2.8k',
     caption: 'Sunset hues, ocean breeze & eternal love in Goa with Madhav & Niharika. Film live on YouTube! @sumit.studio',
   },
   {
     id: 'insta-2',
-    image: 'https://i.ytimg.com/vi/UPtI04xC71k/maxresdefault.jpg',
+    image: '/images/yt/UPtI04xC71k-maxresdefault.jpg',
     alt: 'Abhishek & Himanshi at Jim Corbett @sumit.studio',
     likes: '3.4k',
     caption: 'Same day edit magic amidst wilderness and royal vows. Abhishek & Himanshi @sumit.studio',
   },
   {
     id: 'insta-3',
-    image: 'https://i.ytimg.com/vi/x0dr-294WOw/maxresdefault.jpg',
+    image: '/images/yt/x0dr-294WOw-maxresdefault.jpg',
     alt: 'Prarit & Simran Luxury Prewedding @sumit.studio',
     likes: '4.1k',
     caption: 'High-fashion romance in Delhi NCR. Simran & Prarit looking timeless. @sumit.studio',
   },
   {
     id: 'insta-4',
-    image: 'https://i.ytimg.com/vi/nN635qR7ifI/maxresdefault.jpg',
+    image: '/images/yt/nN635qR7ifI-maxresdefault.jpg',
     alt: 'Manvi & Hardik Engagement @sumit.studio',
     likes: '1.9k',
     caption: 'Pure royal celebrations at The Leela Palace! Congratulations Manvi & Hardik @sumit.studio',
   },
   {
     id: 'insta-5',
-    image: 'https://i.ytimg.com/vi/4nBk7dJSULA/maxresdefault.jpg',
+    image: '/images/yt/4nBk7dJSULA-maxresdefault.jpg',
     alt: 'Anuragh & Annu Picture Villa Shoot @sumit.studio',
     likes: '2.2k',
     caption: 'Dreamy setups, candid smiles and pure love at Picture Villa. @sumit.studio',
   },
   {
     id: 'insta-6',
-    image: 'https://i.ytimg.com/vi/Exrv6mdcRpM/maxresdefault.jpg',
+    image: '/images/yt/Exrv6mdcRpM-maxresdefault.jpg',
     alt: 'Dhruv & Navya Goa Pre-Wedding @sumit.studio',
     likes: '3.1k',
     caption: 'Under the golden Goa sun with Dhruv & Navya. Coming soon! @sumit.studio',
   },
   {
     id: 'insta-7',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop',
+    image: '/images/yt/AYOeKL3VNPA-maxresdefault.jpg',
     alt: 'Bridal portrait elegance @sumit.studio',
     likes: '2.5k',
     caption: 'The quiet hour before vows. Handcrafted polki and pure serene beauty. @sumit.studio',

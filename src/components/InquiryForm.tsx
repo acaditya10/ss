@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { INQUIRY_CARD_IMAGE } from '../data/portfolioData';
+import { INQUIRY_CARD_IMAGE, STUDIO_INFO } from '../data/portfolioData';
 import { LogoSvg } from './Logo';
 import { Phone, Mail, Instagram, ArrowRight, CheckCircle2 } from 'lucide-react';
 
@@ -31,7 +31,7 @@ export const InquiryForm: React.FC = () => {
       ].join('\n'),
     );
 
-    window.location.href = `mailto:info@sumitstudio.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${STUDIO_INFO.email}?subject=${subject}&body=${body}`;
     setIsSubmitting(false);
     setSubmitted(true);
   };
@@ -234,7 +234,7 @@ export const InquiryForm: React.FC = () => {
               <div className="pt-3 border-t border-[#111111]/10 space-y-2.5 text-xs font-sans-clean text-[#111111]">
                 {/* Call / WhatsApp */}
                 <a
-                  href="https://wa.me/919810000000"
+                  href={`https://wa.me/${STUDIO_INFO.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2.5 text-[#55524B] hover:text-[#7D836D] transition-colors"
@@ -245,7 +245,7 @@ export const InquiryForm: React.FC = () => {
 
                 {/* Email */}
                 <a
-                  href="mailto:inquiries@sumitstudio.com"
+                  href={`mailto:${STUDIO_INFO.email}`}
                   className="flex items-center gap-2.5 text-[#55524B] hover:text-[#7D836D] transition-colors"
                 >
                   <Mail className="w-4 h-4 text-[#7D836D] stroke-[1.5]" />
@@ -254,7 +254,7 @@ export const InquiryForm: React.FC = () => {
 
                 {/* Instagram */}
                 <a
-                  href="https://instagram.com"
+                  href={STUDIO_INFO.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2.5 text-[#55524B] hover:text-[#7D836D] transition-colors"
